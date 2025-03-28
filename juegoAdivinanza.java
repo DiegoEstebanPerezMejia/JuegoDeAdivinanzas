@@ -36,7 +36,26 @@ public class JuegoAdivinanza {
 
                 if(entradaValida==true)
                  intentos++;
+
+                if (numeroUsuario == numeroAleatorio) {
+                    System.out.println("¡Felicidades! Has adivinado el número en " + intentos + " intentos.");
+                    adivinado = true;
+                    break;
+                }
+
+                else if (numeroUsuario < numeroAleatorio) 
+                    System.out.println("El número es mayor. Intenta de nuevo.");
+                
+                else 
+                    System.out.println("El número es menor. Intenta de nuevo.");
+                
+
         }
+
+            if (!adivinado) 
+            System.out.println("Lo siento, has agotado tus intentos. El número era " + numeroAleatorio);
+
+            scanner.close();
 
  }
 }
