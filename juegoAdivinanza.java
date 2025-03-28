@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,6 +24,18 @@ public class JuegoAdivinanza {
                 numeroUsuario = scanner.nextInt();
                 entradaValida = true;
             } 
+            else {
+                System.out.println("Error: Entrada no valida. Por favor, ingresa un número entre 1 y 100.");
+                scanner.next(); 
+            }
+
+                 if (numeroUsuario < 1 || numeroUsuario > 100) {
+                    System.out.println("Número fuera de rango. Introduce un número entre 1 y 100.");
+                    continue;
+                }
+
+                if(entradaValida==true)
+                 intentos++;
         }
 
  }
