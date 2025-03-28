@@ -13,15 +13,22 @@ public class JuegoAdivinanza {
         System.out.println("Tienes 10 intentos. ¡Buena suerte!");
 
         while(intentos < maxIntentos){
+            if (numeroUsuario == numeroAleatorio) {
+                    System.out.println("¡Felicidades! Has adivinado el número en " + intentos + " intentos.");
+                    adivinado = true;
+                    break;
+                }
 
+                else if (numeroUsuario < numeroAleatorio) 
+                    System.out.println("El número es mayor. Intenta de nuevo.");
+                
+                else 
+                    System.out.println("El número es menor. Intenta de nuevo.");
         }
         if (!adivinado) 
         System.out.println("Lo siento, has agotado tus intentos."");
 
         scanner.close();
-
-    }
-}
 
     }
 }
